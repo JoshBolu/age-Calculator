@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&italic&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: hsl(0, 0%, 86%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 20px;
+}
+.container{
+    width: 470px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px 10px 120px 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;   
+    gap: 20px; 
+}
+.container .inputContainer{
+    display: flex;
+    gap: 15px;
+}
+.container .inputContainer label{
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    color: hsl(0, 1%, 44%);
+} 
+.container .inputContainer input{
+    width: 100px;
+    height: 50px;
+    border: 2px solid hsl(0, 0%, 86%);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 800;
+}
+.container .inputContainer input.focused{
+    border: 2px solid hsl(259, 100%, 65%);
+    outline: none;
+}
+.container .inputContainer input.error{
+    border: 2px solid red;
+    outline: none;
+}
+.container .inputContainer p{
+    font-size: 8px;
+    font-weight: 600;
+    color: hsl(0, 100%, 67%);
+    font-style: italic;
+}
+.container .demacationActionButton{
+    display: flex;
+    align-items: center;
+    height: 55px;
+}
+
+.container .demacationActionButton .line1,.line2{
+    width:43%;
+    background-color: hsl(0, 0%, 86%);
+    height: 1px;
+}
+.container .demacationActionButton .arrowdownContainer{
+    width: 12%;
+    height: 50px;
+}
+.container .demacationActionButton button{
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.container .demacationActionButton button:hover{
+    background-color: hsl(259, 100%, 65%);
+}
+.container .displayContainer{
+    font-style: italic;
+}
+.container .displayContainer div{
+    font-size: 45px;
+}
+.container .displayContainer span{
+    color: hsl(259, 100%, 65%);
+}
+    
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 480px) and (min-width: 410px){
+    .container{
+        width: 90%;
+        height: auto;
+        padding: 20px; 
+    }
+    .container .inputContainer input{
+        height: 40px;
+        border: 2px solid hsl(0, 0%, 86%);
+        padding: 7px;
+        font-size: 18px;
+    }
+}
+@media (max-width: 409px){
+    .container{
+        width: 90%;
+        height: auto;
+        padding: 13px; 
+    }
+    .container .inputContainer input{
+        border: 2px solid hsl(0, 0%, 86%);
+        padding: 7px;
+        font-size: 16px;
+        width: 70px;
+        padding:5px;
+    }
+    .container .demacationActionButton .line1{
+        order: 3;
+    }
+    .container .displayContainer div{
+        font-size: 35px;
+    }
+    .container .demacationActionButton .arrowdownContainer{
+        width: none;
+        height: auto;
+    }
+}
+@media (max-width: 290px){
+    .container .inputContainer input{
+        width: 60px;           
+    }
+    .container .displayContainer div{
+        font-size: 30px;
+    }
+    .container .demacationActionButton .line1,.line2{
+        width:41%;
+        background-color: hsl(0, 0%, 86%);
+        height: 1px;
+    }
+    .container .demacationActionButton .arrowdownContainer{
+        width: 18%;
+    }
+}
